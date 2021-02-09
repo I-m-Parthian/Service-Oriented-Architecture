@@ -2,37 +2,40 @@
 
 ### What is SOA?
 
-According to [Wikipedia](https://en.wikipedia.org/wiki/Service-oriented_architecture) ,
-> Service-oriented architecture (SOA) is a style of software design where services are provided to the other components by application components, through a communication protocol over a network. A SOA service is a discrete unit of functionality that can be accessed remotely and acted upon and updated independently, such as retrieving a credit card statement online. SOA is also intended to be independent of vendors, products and technologies.
+According to [Wikipedia](https://en.wikipedia.org/wiki/Service-oriented_architecture),
+> Service-oriented architecture (SOA) is a style of software design where services are provided to the other components by application components, through a communication protocol over a network. An SOA service is a discrete unit of functionality that can be accessed remotely and acted upon and updated independently, such as retrieving a credit card statement online. SOA is also intended to be independent of vendors, products and technologies.
 
 
-This definition is quite overwhelming, so in-order to understand it in an easy and detailed  way let’s break it down into smaller parts and then try to learn them one at a time. But before diving deep into this, it is also important to know '*Why there is a need for SOA or any other architectural style?*' and '*Which style is used prior to this?*'
+This definition is quite overwhelming, so to understand it in an easy and detailed  way let’s break it down into smaller parts and then try to learn them one at a time. But before diving deep into this, it is also important to know *Why there is a need for SOA or any other architectural style* and *Which style is used prior this?*
 
-### Single Tier/Monolithic Architecture
-As we all know, in order to accomplish any software/engineering project some basic conventions and procedures need to be followed. So, the initial convention or style that followed in the software development is **Single-Tier Architecture**.
+### Evolution of SOA
+As we all know, to accomplish any software engineering task some basic conventions and procedures need to be followed. So, the initial conventions or style that followed in software development is **Single-Tier Architecture**.
 
 ![Single Tier Architecture diagram](https://mk0softwaretest02r6g.kinstacdn.com/wp-content/uploads/2016/06/one-tier-software-architecture.png)
 
-In this type of arcitecture only the authorised users can access/view the info. So,can't be used for public presentational projects.
+In this type of architecture, there is a single machine which acts as a container and all the layers(Presentation layer, Bussiness Logic layer or Database layer) are kept in the same container. Thus it is called **Monolithic Architecture**.
 
-Secondly, all the layers(Presentation layer, Bussiness Logic layer or Database layer) are stored on a single machine due to this:
-* Difficult to maintain as single system needs to bear the entire load
-* *Less Reliebility* : There is no backup system in case of system failure or server down
- * *No Flexibility* : Difficult to update the code base and no Reusability
- * *Not Scalable* : vvkjvbdfvk
+Due to this reason, the above architectural style of software development is:
+* *Not Flexible*: It is very difficult to update the code base and make changes in the technology stack used.
 
-Now, the entire software commmunity is need of a model which can provide:
-* Scalability
-* Reusability
-* Parallel maintainence and Updation
-* Interoperability
+* *Less Reliable*: If even a single feature of the system fails the entire system needs to be step down from the production/live.
 
-and many more...
+* *Not Scalable*: The rebuild is mandatory to scale the project as it is programmed hierarchically.
 
+* *No Scope of Continous Development*: building and deployment of features are not possible simultaneously.
+ 
 
-So, Here comes SOA as a saviour😎 for the entire devlopment community.
+Thus, the entire software community necessitates a model which can be a perfect fit for complex architectures(where monolithic style fails). So, Here comes SOA as a saviour😎 for the entire development community.
+
+### SOA and its princilples
 
 SOA is an approach to distributed system architecture that employs loosely coupled services, standard interfaces and protocols to deliver seamless cross platform integration. It is used to integrate widely divergent components by providing  them with a common interface and a set of protocols for them to communicate through service bus.
+
+In SOA, the enire application is not built at once. Here,it is broken down into small functional pieces known as services and after building these services the results are combined to reach the desired result.
+
+The main benefit of SOA or any multi-tier architechtural style is it provided hetrogenous interoperability.
+
+This simple means that we can create each service into a different technology/tool and then only we need to find out the medium of communication among them.
 
 ![Heterogeneous Interoperability in SOA](https://www.oreilly.com/library/view/microservices-vs-service-oriented/9781491975657/assets/mvso_0402.png)
 
